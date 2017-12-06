@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [BPO]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <test name="Run on IE(failed)" parallel="tests">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="ParallelBrowsingChrome">
+        <methods>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- ParallelBrowsingChrome -->
+      <class name="ParallelBrowser">
+        <methods>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- ParallelBrowser -->
+      <class name="ParallelBrowingIE">
+        <methods>
+          <include name="Create_PrintProduct"/>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- ParallelBrowingIE -->
+    </classes>
+  </test> <!-- Run on IE(failed) -->
+  <test name="Run on Chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="ParallelBrowsingChrome">
+        <methods>
+          <include name="Create_PrintProduct"/>
+          <include name="LaunchBrowser"/>
+          <include name="Testone"/>
+        </methods>
+      </class> <!-- ParallelBrowsingChrome -->
+      <class name="ParallelBrowser">
+        <methods>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- ParallelBrowser -->
+      <class name="ParallelBrowingIE">
+        <methods>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- ParallelBrowingIE -->
+    </classes>
+  </test> <!-- Run on Chrome(failed) -->
+  <test name="Run on Firefox(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="ParallelBrowsingChrome">
+        <methods>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- ParallelBrowsingChrome -->
+      <class name="ParallelBrowser">
+        <methods>
+          <include name="LaunchBrowser"/>
+          <include name="Create_PrintProduct"/>
+        </methods>
+      </class> <!-- ParallelBrowser -->
+      <class name="ParallelBrowingIE">
+        <methods>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- ParallelBrowingIE -->
+    </classes>
+  </test> <!-- Run on Firefox(failed) -->
+</suite> <!-- Failed suite [BPO] -->
